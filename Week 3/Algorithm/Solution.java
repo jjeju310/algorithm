@@ -1,5 +1,6 @@
 import java.util.*;
 
+
 public class Solution {
     public int[] solution(int[] progresses, int[] speeds) {
         Queue<Integer> queue = new LinkedList<>();
