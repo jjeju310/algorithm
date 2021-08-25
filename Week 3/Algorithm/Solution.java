@@ -1,5 +1,3 @@
-package StackQueue;
-
 import java.util.*;
 
 public class Solution {
