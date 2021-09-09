@@ -1,46 +1,43 @@
-'''
-- heapq를 사용하는 이유 : 현재시간을 기준으로 대기하는 job들 중에서 무조건 가장 짧은 요청을 먼저 수행함
-- 우선순위큐를 사용해서 항상 최솟값을 꺼냄
-
-- jobs_heap[]
-- now : 현재 시각
-- last : 지난 시각
-- count : 처리한 작업의 개수
-
-작업이 수행할동안 나머지 작업들을 heap에 넣음
-작업이 끝나면 heap에서 작은 작업을 실행시킴
-
-1. jobs 라는 리스트를 정렬해줌 (시작시간이 0초인애가 있으면 빨리 시작해주기 위해서)
-2. count: 작업이 끝났는지 검사해줌 / last = 현재 작업이 시작한 시간
-3. wait : 일이 진행되는 동안 기다리는 다른 작업들을 저장하는 힙
-4. time : 현재 시간인데, jobs의 첫번째 요소의 시간으로 초기화함 (어떤 작업이 진행되고 있는데 )
-5. length : 리스트의 길이
-6. answer : 
-'''
 import heapq
 
-# jobs = []
 def solution(jobs):
-    jobs.sort()
-    count, last = 0, -1 
-    wait = []
-    time = jobs[0][0]
-    length = len(jobs)
+    '''
+    1. jobs를 시작시간 별로 정렬한다.
+    2. while문: 끝난 작업개수 < 총 작업개수
+
+        2-1. jobs를 순회하면서 heap에 실행시간이 작은 순서대로 넣는다. (넣을 때 힙에 거꾸로 넣음 실행시간 순서대로 정렬되라고)
+        2-2. other jobs에 작업이 있으면:
+                    2-2-1. 현재 작업의 시작시간으로 현재시간을 넣음
+                    2-2-2. 힙에서 현작업 꺼냄
+                    2-2-3. 끝난 작업수 +1
+                    2-2-4. 현재 시간에 걸린 시간을 더해줌
+                    2-2-5. answer += 대기시간(현재 시간 - 원래 시작했어야 하는 시간)
+        2-3. 없으면:
+            current_time += 1 
+    3. answer 계산 (총 걸리시간 / job개수)
+    '''
+    finished_jobs_cnt = 0
+    total_jobs_cnt = len(jobs)
     answer = 0
+    current_job_start_time = -1
+    current_time = 0
+    jobs.sort()
+    other_jobs = []
 
-    while count < len(jobs):
+    while finished_jobs_cnt < total_jobs_cnt:
         for s, t in jobs:
-            if last  < s <= time:
-                heapq.heappush(wait, (t, s)) # 실행시간이 가장 작은걸로 정렬해야하니깐 거꾸로 넣음
+            if current_job_start_time < s < current_time:
+                heapq.heappush(other_jobs, (t,s)) 
         
-        if len(wait) > 0:  # 작업이 끝난 시점에 힙에 남아있는 작업이 있으면
-                last = time
-                term, start = heapq.heappop(wait)
-                count += 1
-                time += term # 현재 시간에 걸린 시간 더해줌
-                answer += (time - start)
-        else:
-            time += 1 # 요소가 없으면 시간을 기다림 (?)
+        if len(other_jobs) > 0:
+            current_job_start_time = current_time
+            time, start =heapq.heappop(other_jobs)
+            finished_jobs_cnt +=1
+            current_time += time
+            wait_time = current_time - start
+            answer += wait_time
 
-    average_answer = answer // length
+        else:
+            current_time+=1
+    average_answer = answer // total_jobs_cnt
     return average_answer
