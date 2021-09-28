@@ -9,7 +9,7 @@ class Solution {
 
         while(start <= end) {
             long mid = (start + end) / 2; // 심사하는데 걸리는 시간의 중간값
-            long done = 0;				  // 심사관마다 중간시간을 기준으로 심사할 수 있는 사람 수의 합
+            long done = 0; // 심사관마다 중간시간을 기준으로 심사할 수 있는 사람 수의 합
             for(int i = 0; i < times.length; i++) {
                 done = done + (mid/times[i]); // 사람 수 = 주어진 시간(mid) / 해결 가능한 시간
             }
