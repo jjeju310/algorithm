@@ -18,7 +18,7 @@ class Solution {
                 start = mid + 1;
             } else {
 				answer = mid;
-                end = mid - 1;                
+                end = mid - 1;
             }
         }
         return answer;
