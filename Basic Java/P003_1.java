@@ -1,20 +1,20 @@
-package hiding;
+package BasicJava;
 
-public class MyDate {
+public class P003_1 {
 	/**
-	 * ¹®Á¦
-	 * day, month, year º¯¼ö´Â privateÀ¸·Î ¼±¾ğ
-	 * °¢ º¯¼öÀÇ get, set ¸Ş¼­µå¸¦ publicÀ¸·Î »ı¼º
-	 * MyDate(int day, int month, int year) »ı¼ºÀÚ¸¦ ¸¸µê
-	 * public boolean isValid() ¸Ş¼­µå¸¦ ¸¸µé¾î ³¯Â¥°¡ À¯È¿ÇÑÁö È®ÀÎ
-	 * MyDateTest Å¬·¡½º¿¡¼­ »ı¼ºÇÑ MyDate ³¯Â¥°¡ À¯È¿ÇÑÁö È®ÀÎ
+	 * ë¬¸ì œ
+	 * day, month, year ë³€ìˆ˜ëŠ” privateìœ¼ë¡œ ì„ ì–¸
+	 * ê° ë³€ìˆ˜ì˜ get, set ë©”ì„œë“œë¥¼ publicìœ¼ë¡œ ìƒì„±
+	 * MyDate(int day, int month, int year) ìƒì„±ìë¥¼ ë§Œë“¦
+	 * public boolean isValid() ë©”ì„œë“œë¥¼ ë§Œë“¤ì–´ ë‚ ì§œê°€ ìœ íš¨í•œì§€ í™•ì¸
+	 * MyDateTest í´ë˜ìŠ¤ì—ì„œ ìƒì„±í•œ MyDate ë‚ ì§œê°€ ìœ íš¨í•œì§€ í™•ì¸
 	 */
 	private int day;
 	private int month;
 	private int year;
 	private boolean isValid = true;
 	
-	public MyDate(int day, int month, int year) {
+	public P003_1(int day, int month, int year) {
 		setYear(year);
 		setMonth(month);
 		setDay(day);
@@ -34,7 +34,7 @@ public class MyDate {
 			}
 			break;
 		
-		// À±³âÀº Á¦¿ÜÇÔ
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		case 2:
 			if(day < 1 || day > 28) {
 				isValid = false;
@@ -79,9 +79,9 @@ public class MyDate {
 	
 	public String isValid() {
 		if(isValid) {
-			return "À¯È¿ÇÑ ³¯Â¥ÀÔ´Ï´Ù.";
+			return "ï¿½ï¿½È¿ï¿½ï¿½ ï¿½ï¿½Â¥ï¿½Ô´Ï´ï¿½.";
 		} else {
-			return "À¯È¿ÇÏÁö ¾ÊÀº ³¯Â¥ÀÔ´Ï´Ù.";
+			return "ï¿½ï¿½È¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥ï¿½Ô´Ï´ï¿½.";
 		}
 	}
 		

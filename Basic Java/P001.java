@@ -1,13 +1,9 @@
-package algorithm;
+package BasicJava;
 
 import java.util.Scanner;
 
-public class IfQuestion {
-	/**
-	 * ¹®Á¦ ÃâÃ³: ¹éÁØ ¾Ë°í¸®Áò if¹® - »çºÐ¸é °í¸£±â
-	 * x, yÁÂÇ¥¸¦ °¢°¢ ÀÔ·ÂÇßÀ» ¶§ ¾î´À »çºÐ¸é¿¡ À§Ä¡ÇÏ´ÂÁö ¾Ë¾Æ³»´Â ÇÁ·Î±×·¥ ¸¸µé±â
-	 * 
-	 */
+public class P001 {
+	// ë°±ì¤€ 14581
 	public static void main(String[] args) {		
 		Scanner sc = new Scanner(System.in);
 		int x = sc.nextInt();
@@ -22,7 +18,7 @@ public class IfQuestion {
 		} else if(x > 0 && y < 0) {
 			System.out.println(4);
 		} else {
-			System.out.println("¹üÀ§ ÃÊ°ú");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½Ê°ï¿½");
 		}
 
 	}
