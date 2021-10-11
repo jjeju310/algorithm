@@ -1,6 +1,7 @@
-package week8;
+package BasicJava;
 
-class Function1 {
+class P041 {
+    // 백준 15596
     long sum(int[] a) {
         long sum = 0;	// a 배열 정수 합 변수
 

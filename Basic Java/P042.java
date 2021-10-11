@@ -1,6 +1,7 @@
-package week8;
+package BasicJava;
 
-public class Function2 {
+public class P042 {
+    // 백준 4673
     public static void main(String[] args) {
         boolean[] check = new boolean[10001];	// 1부터 10000이므로
 

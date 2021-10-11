@@ -1,8 +1,9 @@
-package week8;
+package BasicJava;
 
 import java.util.Scanner;
 
-public class Function3 {
+public class P043 {
+    // 백준 1065
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
