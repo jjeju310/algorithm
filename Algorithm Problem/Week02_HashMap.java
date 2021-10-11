@@ -1,6 +1,9 @@
+package AlgorithmProblem;
+
 import java.util.HashMap;
 
-class Solution {
+// 프로그래머스 - 전화번호 목록 (https://programmers.co.kr/learn/courses/30/lessons/42577)
+class Week02_HashMap {
     public boolean solution(String[] phone_book) {
         boolean answer = true;
         HashMap<String, Integer> phonebook = new HashMap<>();
