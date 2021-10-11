@@ -1,11 +1,11 @@
-package baekjoon;
+package BasicJava;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Array5 {
+public class P038 {
+    // 백준 1546
     public static void main(String[] args) {
-
         Scanner in = new Scanner(System.in);
 
         double arr[] = new double[in.nextInt()];

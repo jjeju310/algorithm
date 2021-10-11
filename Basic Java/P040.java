@@ -1,8 +1,9 @@
-package baekjoon;
+package BasicJava;
 
 import java.util.Scanner;
 
-public class Array7 {
+public class P040 {
+    // 백준 4344
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 

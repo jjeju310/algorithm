@@ -1,10 +1,10 @@
-package baekjoon;
+package BasicJava;
 
 import java.util.Scanner;
 import java.util.HashSet;
 
-public class Array4 {
-
+public class P037 {
+    // 백준 3052
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         HashSet<Integer> h = new HashSet<Integer>();
