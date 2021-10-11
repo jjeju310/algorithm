@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 // 프로그래머스 - 디스크 컨트롤러 (https://programmers.co.kr/learn/courses/30/lessons/42627)
-class Week06_TreeHeap {
+class Week05_TreeHeap {
     class Job {
         int requireTime; // 요청시간
         int runTime;     // 소요시간

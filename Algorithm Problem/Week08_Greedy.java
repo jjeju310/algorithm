@@ -2,7 +2,7 @@ package AlgorithmProblem;
 
 import java.util.*;
 
-class Week09_Greedy {
+class Week08_Greedy {
     public int solution(int[] people, int limit) {
         Arrays.sort(people);
         int answer = 0;

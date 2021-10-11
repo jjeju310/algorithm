@@ -3,7 +3,7 @@ package AlgorithmProblem;
 import java.util.*;
 
 // 프로그래머스 - 기능개발 (https://programmers.co.kr/learn/courses/30/lessons/42586)
-public class Week03_StackQueue {
+public class Week02_StackQueue {
     public int[] solution(int[] progresses, int[] speeds) {
         Queue<Integer> queue = new LinkedList<>();
 

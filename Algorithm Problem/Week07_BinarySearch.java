@@ -3,7 +3,7 @@ package AlgorithmProblem;
 import java.util.*;
 
 // 프로그래머스 - 입국심사 (https://programmers.co.kr/learn/courses/30/lessons/43238)
-class Week08_BinarySearch {
+class Week07_BinarySearch {
     public long solution(int n, int[] times) {
         long answer = 0;
         Arrays.sort(times);

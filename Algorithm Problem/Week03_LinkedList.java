@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 // 백준 1158 - 요세푸스 문제 (https://www.acmicpc.net/problem/1158)
-public class Week04_LinkedList {
+public class Week03_LinkedList {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         LinkedList<Integer> list = new LinkedList<>();
