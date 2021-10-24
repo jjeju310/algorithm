@@ -20,7 +20,7 @@ public class Week09_DynamicProgramming {
           path[i][j] += path[i-1][j] % 1000000007; // 우측 이동
         }
         if(j != 0) {
-          path[i][j] += path[i][j-1] % 1000000007; // 좌측 이동
+          path[i][j] += path[i][j-1] % 1000000007; // 아래 이동
         }
       }
     }
