@@ -10,16 +10,15 @@ public class Week09_DynamicProgramming {
       path[puddles[i][1]][puddles[i][0]] = -1; // 웅덩이: -1로 설정
     }
 
-    for(int i = 0; i <= n; i++) {
-      for(int j = 0; j <= m; j++) {
-        if(path[i][j] == -1) {
-          path[i][j] = 0; // 웅덩이를 만났다: 값을 0으로 줌
+    for(int i = 1; i <= n; i++) {
+      for(int j = 1; j <= m; j++) {
+        if(path[i][j] == -1) { // 웅덩이 --> 넘어간다.
           continue;
         }
-        if(i != 0) {
+        if(path[i-1][j] >= 0 && path[i][j] >= 0) {
           path[i][j] += path[i-1][j] % 1000000007;
         }
-        if(j != 0) {
+        if(path[i][j-1] >= 0 && path[i][j] >= 0) {
           path[i][j] += path[i][j-1] % 1000000007;
         }
       }
