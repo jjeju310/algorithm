@@ -16,10 +16,10 @@ public class Week09_DynamicProgramming {
           path[i][j] = 0; // 웅덩이를 만났다: 값을 0으로 줌
           continue;
         }
-        if(i != 0) { // 맨 위가 아니다: 위쪽 값을 더해줌
+        if(i != 0) {
           path[i][j] += path[i-1][j] % 1000000007;
         }
-        if(j != 0) { // 맨 왼쪽이 아니다: 왼쪽 값을 더해줌
+        if(j != 0) {
           path[i][j] += path[i][j-1] % 1000000007;
         }
       }
