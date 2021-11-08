@@ -11,6 +11,3 @@ def main(bridge_length, weight, truck_weights):
             else: # weight를 넘어버린 경우? 아무것도 안올라갔으니 
                 trucks_on_bridge.append(0)  # 리스트에 0 추가
     return time
-
-if __name__ == '__main__':
-    main(2, 10, [7,4,5,6])
