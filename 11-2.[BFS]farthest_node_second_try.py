@@ -10,9 +10,9 @@ def solution(n, edge):
         node_graph[y].append(x)
     
     visited = [0]*(n+1)  # 방문한 노드들이 있으면 몇개인지 저장되는 리스트
-    visited[1] = 1 # 1번 노드는 방문했다고 가정
+    visited[1] = 1  # 1번 노드는 방문했다고 가정
     
-    search_queue = deque([1]) # 1번 노드부터 탐색 시작하기 위해 큐에 넣음
+    search_queue = deque([1])  # 1번 노드부터 탐색 시작하기 위해 큐에 넣음
     
     # 탐색
     while len(search_queue) > 0:
