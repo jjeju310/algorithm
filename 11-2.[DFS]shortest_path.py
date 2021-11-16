@@ -22,10 +22,10 @@ def print_answer(distance, node_cnt):
 def dijkstra(start, node_graph, distance):
     queue = []
 
-    heapq.heappush(queue, (0, start)) # 가중치 0원에 start에서 시작하는걸로 초기화
-    distance[start]=0
+    heapq.heappush(queue, (0, start))  # 가중치 0원에 start에서 시작하는걸로 초기화
+    distance[start] = 0
 
-    while len(queue)>0:
+    while len(queue) > 0:
         dist, now = heapq.heappop(queue)  # Queue 생성
 
         # 1) 현재 지점을 들러서 가는게 더 손해인 경우
@@ -59,6 +59,7 @@ def main():
 
     print_answer(distance, node_cnt)
     return
+
 
 if __name__ == "__main__":
     main()
