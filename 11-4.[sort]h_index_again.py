@@ -34,7 +34,7 @@ def solution(citations):
 
 
 def main():
-    citations = [10, 100]
+    citations = [3, 0, 5, 6, 1]
     solution(citations)
 
 
